@@ -1,0 +1,17 @@
+{
+  "repo": "sonar-mob-contacts-core",
+  "thresholds": {
+    "signal": 3,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 5,
+    "ship": 157,
+    "watch": 105
+  },
+  "terms": [
+    "form pressure",
+    "sync drift",
+    "local state",
+    "conflict cost"
+  ]
+}
