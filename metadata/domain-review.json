@@ -1,0 +1,73 @@
+{
+  "repo": "sonar-mob-contacts-core",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for contacts workflows, centered on incremental indexing, append-only fixtures, and checkpoint recovery checks.",
+  "review_model": {
+    "terms": [
+      "form pressure",
+      "sync drift",
+      "local state",
+      "conflict cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "form pressure",
+      "signal": 58,
+      "slack": 37,
+      "drag": 31,
+      "confidence": 67,
+      "score": 127,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "sync drift",
+      "signal": 55,
+      "slack": 21,
+      "drag": 27,
+      "confidence": 50,
+      "score": 100,
+      "lane": "hold"
+    },
+    {
+      "name": "edge",
+      "focus": "local state",
+      "signal": 62,
+      "slack": 33,
+      "drag": 9,
+      "confidence": 71,
+      "score": 201,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "conflict cost",
+      "signal": 51,
+      "slack": 40,
+      "drag": 13,
+      "confidence": 89,
+      "score": 192,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "form pressure",
+      "signal": 57,
+      "slack": 54,
+      "drag": 30,
+      "confidence": 56,
+      "score": 134,
+      "lane": "watch"
+    }
+  ]
+}
